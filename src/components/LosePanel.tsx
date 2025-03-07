@@ -1,5 +1,6 @@
 import { Dialog, DialogPanel, Button} from '@headlessui/react'
 import useStatusStore from '../store/statusStore';
+import wordleLogo from '../image/images.png';
 
  type LosePanelProps ={
       openLosePanel:boolean,
@@ -25,7 +26,7 @@ export default function LosePanel(props:LosePanelProps) {
                   className="w-full max-w-md h-full min-h-screen flex flex-col justify-center items-center rounded-xl bg-white p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
                 >
                     <div className='flex flex-col items-center pb-12'>
-                  <img src="./src/image/images.png" className='w-42 pb-4'/>
+                  <img src={wordleLogo} className='w-42 pb-4'/>
                   <h1 className='text-xl text-black font-bold pb-4'>YOU LOSE</h1>
                   <p className='text-xl'>The correct word was: "{correctWord}"</p>
                   </div>
